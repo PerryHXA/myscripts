@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>S5 Market</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+    <script src="main.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+    <div id="stg_switch">
+        <img id="stg-swt" src="images/switch.png">
+        <div id="stg-blocks">
+            <div id="stg-infoArea">
+                <b id="stg-infoText" >12:00</b>
+                <i class="fa-solid fa-wifi"></i>
+                <i class="fa-solid fa-battery-half"></i>
+            </div>
+            <div id="stg-games">
+                <div onclick="openGame('mario')" class="games">
+                    <img src="images/games/mario.png">
+                </div>
+                <div onclick="openGame('undertale')" class="games">
+                    <img src="images/games/undertale.png">
+                </div>
+                <div onclick="openGame('snake')" class="games">
+                    <img src="images/games/snake.png">
+                </div>
+                <div onclick="openGame('bird')" class="games">
+                    <img src="images/games/bird.png">
+                </div>
+            </div>
+            <div onclick="closeGame()" id="stg-power">
+                <i class="fa-solid fa-power-off"></i>
+            </div>
+            <img id="stg-console" src="images/icon.png">
+            <div id="stg-stick"></div>
+            
+        </div>
+        <div id="stg-gameArea">
+            <div onclick="goHome()" id="stg-home">
+                <i class="fa-solid fa-house"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

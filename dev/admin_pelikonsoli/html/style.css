@@ -1,0 +1,184 @@
+#stg-swt{
+    position: absolute;
+    width: 50%;
+    top: 29%;
+    left: 28%;
+
+
+}
+#stg-blocks{
+    width: 34.9%;
+    height: 30.6%;
+    background: rgb(196, 193, 193);
+    position: absolute;
+    left: 35.6%;
+    top: 31%;
+}
+
+#stg-infoArea{
+    width: 30%;
+    height: 30%;
+    position: relative;
+    left:79%;
+    top: 5%
+}
+#stg-infoArea i{
+    color:rgb(0, 0, 0);
+    margin: 0 0 0 5%;
+}
+
+
+#stg-infoText{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+}
+
+#stg-console{
+    position: relative;
+    top: 81%;
+    left: 4%;
+}
+
+#stg-stick{
+    width: 96%;
+    height: 0.2%; 
+    background: rgb(85, 85, 85);
+    position: relative;
+    left: 2%;
+    top: 70%;
+}
+
+#stg-games{
+    position: absolute;
+    width: 90%;
+    height: 40%;
+    left:4%;
+    top:20%;
+}
+
+.games{
+    width: 23%;
+    float:left;
+    margin: 0 0 0 2%;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.games:hover{
+    transform: scale(1.1);
+}
+
+.games-mario{
+    transform: scale(1.5);
+}
+
+.games-undertale{
+    transform: scale(1.3);
+}
+
+.games-bird{
+    transform: scale(1);
+    margin-top: -0.4%;
+    margin-left: -0.3%;
+}
+
+.games-snake{
+    margin-top: -0.4%;
+    margin-left: -0.3%;
+}
+
+
+.games img{
+    width:100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#stg-power{
+    width: 9%;
+    height: 15%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top:67%;
+    left:45%;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: 0.3s;
+    color: gray
+}
+
+#stg-power:hover{
+    transform: scale(1.2);
+    color:Red
+
+}
+
+
+#stg-power i{
+    font-size: 200%;
+    margin: 15% 0 0 17%;
+}
+
+#stg-gameArea{
+    width: 35%;
+    height: 32%;
+    position: absolute;
+    left: 35.5%;
+    top: 30.6%;
+    overflow: hidden;
+    display: none;
+}
+
+#stg-game{
+    width: 100%;
+    height: 100%;
+}
+
+#stg-red{
+    width: 20%;
+    height: 6.5%;
+    background: #a90000;
+    position: absolute;
+    left:80%;
+    top:14%;
+    transform: rotate(45deg);
+    color: white;
+    text-align: center;
+    line-height: 23px;;
+    display: none;
+}
+
+#stg-home{
+    width: 6%;
+    height: 9%;
+    background: rgb(95, 95, 95);
+    position: absolute;
+    top:3%;
+    left:90%;
+    z-index: 1;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+#stg-home:hover{
+    transform: scale(0.9);
+}
+
+#stg-home i{
+    position: relative;
+    top:20%;
+    left:24%;
+    color:white
+}
+
+#stg_switch{
+    display: none;
+    transform: scale(0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+body{
+    overflow: hidden;
+}

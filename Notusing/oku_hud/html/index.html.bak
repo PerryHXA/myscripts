@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <meta id="viewport" name="viewport" content ="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="stylesheet" type="text/css" href="responsive.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/quasar@2.1.0/dist/quasar.prod.css" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/quasar@2.1.0/dist/quasar.umd.prod.js" defer></script>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        </div>
+            <div id="ui-container">
+                <div id="playerHud" v-show="show">
+                    <transition name="fade">
+                    <div v-if="showHealth">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="30px" :thickness="0.15" :style="{color: healthColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="health" size="40px" :thickness="0.15" :style="{color: healthColor}" :min="0" :max="100" center-color="black">
+                        <img style="top: -2px; left: -0.1px;" id="health" src="health.png" width="17" height="16">
+                    </div>
+                    </transition>
+                    <transition name="fade">
+                    <div v-if="showHunger">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="30px" :thickness="0.15" :style="{color: hungerColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: 0%;" show-value :value="hunger" size="40px" :thickness="0.15" :style="{color: hungerColor}" :min="0" :max="100" center-color="black">
+                        <img style="top: -2px; left: -0.1px;" id="hunger" src="hunger.png" width="17" height="16">
+                    </div>
+                    </transition>
+                    <transition name="fade">
+                    <div v-if="showThirst">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="40px" :thickness="0.15" :style="{color: thirstColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: 0%;" show-value :value="thirst" size="40px" :thickness="0.15" :style="{color: thirstColor}" :min="0" :max="100" center-color="black">
+						<img style="top: -2px; left: -0.1px;" id="thirst" src="thirst.png" width="17" height="16">
+                    </div>
+                    </transition>
+                    <transition name="fade">
+                    <div v-if="showHorseh">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="40px" :thickness="0.15" :style="{color: horsehColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: 0%;" show-value :value="horseh" size="40px" :thickness="0.15" :style="{color: horsehColor}" :min="0" :max="100" center-color="black">
+						<img style="top: -2px; left: -0.1px;" id="horseh" src="horse_health.png" width="17" height="16">
+                    </div>
+                    </transition>
+                    <transition name="fade">
+                    <div v-if="showHorses">
+                        <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="40px" :thickness="0.15" :style="{color: horsesColor}" :min="0" :max="100"></q-circular-progress>
+                        <q-circular-progress class="q-ml-xl" style="left: 0%;" show-value :value="horses" size="40px" :thickness="0.15" :style="{color: horsesColor}" :min="0" :max="100" center-color="black">
+						<img style="top: -2px; left: -0.1px;" id="horses" src="horse_stamina.png" width="17" height="16">
+                    </div>
+                    </transition>
+					<div id="varTemp" class="c100 p100 small third">
+						<span><img class="barIcon" src="img/thermometer.png"></img></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+						<small>Loading...</small>
+					</div>
+                </div>
+            </div> 
+        </div>
+    </body>
+</html>

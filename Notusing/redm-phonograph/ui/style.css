@@ -1,0 +1,244 @@
+@font-face {
+	font-family: 'Chinese Rocks';
+	src: url('chineserocks.ttf');
+}
+
+* {
+	font-family: inherit;
+	font-size: inherit;
+	user-select: none;
+}
+
+::selection {
+	background-color: #d00;
+}
+
+html, body {
+	background: none;
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica;
+	font-size: 2vh;
+	overflow: hidden;
+}
+
+button {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: solid 1px white;
+	font-family: "Chinese Rocks";
+	font-size: 2vh;
+}
+
+button:hover:enabled, button:focus:enabled {
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+button:active:enabled {
+	background-color: white;
+	color: black;
+}
+
+button:disabled {
+	color: #444;
+	border: solid 1px #444;
+}
+
+input {
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: solid 1px white;
+}
+
+input:disabled {
+	color: #444;
+	border: solid 1px #444;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: none;
+	background: rgba(0, 0, 0, 0.5);
+	height: 1vw;
+	width: 1vw;
+	border: 1px solid white;
+	vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+	background: rgba(255, 0, 0, 0.75);
+}
+
+input[type="checkbox"]:disabled {
+	border: 1px solid #444;
+}
+
+input[type=range] {
+	-webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	background: #000;
+	height: 0.25vh;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	background: #f00;
+	width: 1vw;
+	height: 1vh;
+	transform: translate(0, -0.375vh);
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+select {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: solid 1px white;
+}
+
+option {
+	background-color: #000;
+}
+
+::-webkit-scrollbar {
+	background: black;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: white;
+}
+
+#ui {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5vh 0.5vw;
+	flex-flow: column;
+	min-width: 25vw;
+	max-height: 90vh;
+	max-width: 90vw;
+	overflow: hidden;
+}
+
+#start-phonograph {
+	display: grid;
+	grid-template-columns: auto auto auto repeat(7, max-content) auto;
+	grid-gap: 0.25vh 0.25vw;
+	padding: 0.5vh 0;
+}
+
+#volume-container, #offset-container, #loop-container, #filter-container, #locked-container, #video-container, #muted-container {
+	white-space: nowrap;
+}
+
+#active-phonographs-container {
+	overflow-y: auto;
+}
+
+#active-phonographs {
+	display: grid;
+	grid-template-columns: repeat(6, max-content) auto;
+	grid-gap: 1vh 1vw;
+}
+
+.active-phonograph {
+	display: contents;
+}
+
+.active-phonograph-main {
+	display: contents;
+}
+
+.active-phonograph-handle, .active-phonograph-distance, .active-phonograph-volume, .active-phonograph-time, .active-phonograph-video-size, .active-phonograph-controls {
+	white-space: nowrap;
+}
+
+.active-phonograph-controls {
+	text-align: right;
+}
+
+.active-phonograph-queue {
+	grid-column: 2 / 8;
+	display: grid;
+	grid-template-columns: repeat(7, max-content);
+	grid-gap: 1vh 1vw;
+	align-items: baseline;
+	padding: 0 0 0.5vh 0;
+}
+
+.queue-head, .queue-body {
+	display: contents;
+}
+
+.queue-head {
+	font-weight: bold;
+}
+
+#loading {
+	display: none;
+	text-align: center;
+}
+
+.control-button {
+	text-align: center;
+	width: 1.8vw;
+	height: 2.5vh;
+}
+
+.active-phonograph-volume span, .active-phonograph-time span, .active-phonograph-video-size span {
+	padding: 0 0.25vw;
+}
+
+#status {
+	display: grid;
+	grid-template-columns: repeat(6, max-content) auto;
+	grid-gap: 0.5vh 0.5vw;
+	background: none;
+	position: absolute;
+	bottom: 2%;
+	right: 1%;
+	color: #fff;
+}
+
+#base-volume-container {
+	display: flex;
+	align-items: center;
+}
+
+#base-volume-container i, #base-volume-container div {
+	padding: 0 0.25vw;
+}
+
+#set-base-volume {
+	flex-grow: 1;
+}
+
+.player {
+	position: absolute;
+	transform: translate(-50%, -100%);
+	opacity: 0.9;
+}
+
+#preset {
+	font-family: Helvetica, FontAwesome;
+}
+
+#usable-phonographs {
+	font-family: Helvetica, FontAwesome;
+}
+
+mediaelementwrapper > iframe {
+	width: 100%;
+	height: 100%;
+}
+
+mediaelementwrapper > video {
+	width: 100%;
+}
