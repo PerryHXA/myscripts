@@ -3,9 +3,8 @@ local shake = false
 local speed = 2.6
 local PlayerData		= {}
 local size = {x=0.01, y=0.015}
-local huntinglvl
+local huntinglvl = 5
 -- -1569615261
-local ESX = exports['vorp_core']:GetObj()
 
 local banned = {
 	[-1609580060], -- Nyrkki
@@ -15,21 +14,12 @@ local banned = {
 	[-954861255], -- group_held
 	[-1212426201], -- Sniput
 }
----------------- AIMSHAKEEEE ----------------
+---------------- AIMSHAKE ----------------
 
 --levelit--
 
-CreateThread(function()
-	while true do
-		ESX.TriggerServerCallback("Perry_XP:GetLvl",function(levels)
-			if levels then
-				huntinglvl = levels.hunting.lvl
-				print(huntinglvl)
-			end
-		end)
-		Wait(60000)
-	end
-end)
+
+---------
 
 
 CreateThread(function()
